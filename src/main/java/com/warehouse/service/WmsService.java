@@ -28,7 +28,7 @@ public class WmsService {
     // Delay von 5 Sekunden
     private void delay() {
         try {
-            Thread.sleep(20000);
+            Thread.sleep(15000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

@@ -33,7 +33,9 @@ public class WmsPublisher {
     }
 
     public void orderShipped(OrderMessage order) {
-        String msg = "Order shipped to: " + order.getShippingAddressAsString();
+        String msg = "Order shipped to: " + order.getCustomer().getPrename() 
+                                        + order.getCustomer().getPrename() + "with address: "
+                                        + order.getShippingAddressAsString();
 
         rabbitTemplate.convertAndSend("status.queue", msg);
         logger.info("Sent status update: {}", msg);
