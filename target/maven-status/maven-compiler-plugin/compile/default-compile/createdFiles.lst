@@ -1,0 +1,8 @@
+com\warehouse\listener\OrderMessage$Item.class
+com\warehouse\listener\OrderMessage.class
+com\warehouse\publisher\WmsPublisher.class
+com\warehouse\listener\WmsListener.class
+com\warehouse\App.class
+com\warehouse\service\WmsService.class
+com\warehouse\listener\OrderMessage$ShippingAddress.class
+com\warehouse\listener\OrderMessage$Customer.class

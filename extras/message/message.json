@@ -1,0 +1,23 @@
+{
+  "orderId": "ORD-2025-10-16-7891",
+  "customer": {
+    "prename": "Andreas",
+    "name": "Heberle"
+  },
+  "items": [
+    {
+      "productId": "P-8821",
+      "quantity": 2
+    },
+    {
+      "productId": "P-3344",
+      "quantity": 1
+    }
+  ],
+  "shippingAddress": {
+    "street": "Moltke Str. 30",
+    "city": "Karlsruhe",
+    "zipCode": "76133",
+    "country": "Germany"
+  }
+}
