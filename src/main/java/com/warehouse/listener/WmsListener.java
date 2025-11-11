@@ -22,7 +22,11 @@ public class WmsListener {
     @RabbitListener(queues = "orders.queue")
     public void receiveOrder(String payload) {
         OrderMessage orderMessage = convertPayload(payload);
-        logger.info("Order arrived at Warehouse with Order ID: {}", orderMessage.getOrderId());
+        String log = ("Order arrived at Warehouse with Order ID: " + orderMessage.getOrderId());
+        logger.info(log);
+
+        wmsService.publishLog(log);
+        
         wmsService.processOrder(orderMessage);
     }
 

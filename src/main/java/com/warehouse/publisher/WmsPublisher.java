@@ -54,4 +54,9 @@ public class WmsPublisher {
         String full = (first + " " + last).trim();
         return full.isEmpty() ? "unknown customer" : full;
     }
+
+    public void publish(String message) {
+        String logEntry = "[WMS] " + message;
+        rabbitTemplate.convertAndSend("log.queue", logEntry);
+    }
 }

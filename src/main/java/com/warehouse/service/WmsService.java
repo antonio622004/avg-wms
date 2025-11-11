@@ -33,4 +33,8 @@ public class WmsService {
             Thread.currentThread().interrupt();
         }
     }
+
+    public void publishLog(String message) {
+        publisher.publish(message);
+    }
 }
