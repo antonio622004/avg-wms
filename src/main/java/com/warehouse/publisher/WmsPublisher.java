@@ -26,14 +26,14 @@ public class WmsPublisher {
                      ": " + order.getItemsList();
 
         rabbitTemplate.convertAndSend("status.queue", msg);
-        logger.info("Sent status update: {}", msg);
+        publishLog("Sent status update: {}", msg);
     }
 
     public void orderPacked(OrderMessage order) {
         String msg = "Order packed: " + order.getOrderId();
 
         rabbitTemplate.convertAndSend("status.queue", msg);
-        logger.info("Sent status update: {}", msg);
+        publishLog("Sent status update: {}", msg);
     }
     public void orderShipped(OrderMessage orderMessage) {
         Order order = orderMessage.getOrder();
@@ -44,7 +44,7 @@ public class WmsPublisher {
         String msg = "Order shipped to: " + customerName + " with address: " + address;
 
         rabbitTemplate.convertAndSend("status.queue", msg);
-        logger.info("Sent status update: {}", msg);
+        publishLog("Sent status update: {}", msg);
     }
 
     private String buildCustomerName(Customer customer) {
