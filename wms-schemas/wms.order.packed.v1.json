@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    { "$ref": "envelope.v1.json" },
+    {
+      "type": "object",
+      "properties": {
+        "type": { "const": "wms.order.packed.v1" },
+        "payload": {
+          "type": "object",
+          "required": ["orderId"],
+          "properties": {
+            "orderId": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": ["type","payload"]
+    }
+  ]
+}

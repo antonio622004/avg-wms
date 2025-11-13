@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/envelope.v1.json",
+  "title": "Event Envelope v1",
+  "type": "object",
+  "required": ["type","schemaVersion","messageId","correlationId","occurredAt","source","payload"],
+  "properties": {
+    "type": { "type": "string" },
+    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "messageId": { "type": "string", "format": "uuid" },
+    "correlationId": { "type": "string", "minLength": 1 },
+    "occurredAt": { "type": "string", "format": "date-time" },
+    "source": { "type": "string", "enum": ["wms"] },
+    "payload": { "type": "object" }
+  },
+  "additionalProperties": false
+}

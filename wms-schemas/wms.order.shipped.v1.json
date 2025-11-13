@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    { "$ref": "envelope.v1.json" },
+    {
+      "type": "object",
+      "properties": {
+        "type": { "const": "wms.order.shipped.v1" },
+        "payload": {
+          "type": "object",
+          "required": ["orderId","recipient","address"],
+          "properties": {
+            "orderId": { "type": "string" },
+            "recipient": {
+              "type": "object",
+              "required": ["firstName","lastName"],
+              "properties": {
+                "firstName": { "type": "string" },
+                "lastName":  { "type": "string" }
+              },
+              "additionalProperties": false
+            },
+            "address": {
+              "type": "object",
+              "required": ["street","city","zipCode","country"],
+              "properties": {
+                "street":  { "type": "string" },
+                "city":    { "type": "string" },
+                "zipCode": { "type": "string" },
+                "country": { "type": "string" }
+              },
+              "additionalProperties": false
+            },
+            "tracking": {
+              "type": "object",
+              "required": ["carrier","trackingNumber"],
+              "properties": {
+                "carrier": { "type": "string" },
+                "trackingNumber": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": ["type","payload"]
+    }
+  ]
+}

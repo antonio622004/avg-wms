@@ -1,0 +1,14 @@
+{
+  "type": "wms.order.shipped.v1",
+  "schemaVersion": "1.0.0",
+  "messageId": "1d2c3b4a-5e6f-7081-92a3-b4c5d6e7f809",
+  "correlationId": "ORD-20251112-152800-4316CB92",
+  "occurredAt": "2025-11-12T14:28:45Z",
+  "source": "wms",
+  "payload": {
+    "orderId": "ORD-20251112-152800-4316CB92",
+    "recipient": { "firstName": "Andreas", "lastName": "Heberle" },
+    "address": { "street": "Moltke Str. 30", "city": "Karlsruhe", "zipCode": "76133", "country": "Germany" },
+    "tracking": { "carrier": "DHL", "trackingNumber": "00340434123456789012" }
+  }
+}

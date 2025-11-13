@@ -34,7 +34,7 @@ public class WmsService {
         }
     }
 
-    public void publishLog(String message) {
-        publisher.publish(message);
+    public void sendLog(String pattern, Object... args) {
+        publisher.publishLog(pattern, args);
     }
 }

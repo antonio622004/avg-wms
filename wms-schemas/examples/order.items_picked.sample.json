@@ -1,0 +1,15 @@
+{
+  "type": "wms.order.items_picked.v1",
+  "schemaVersion": "1.0.0",
+  "messageId": "0b8f3b44-dbc0-4f8c-92b0-9c1bbf8d0aa2",
+  "correlationId": "ORD-20251112-152800-4316CB92",
+  "occurredAt": "2025-11-12T14:28:15Z",
+  "source": "wms",
+  "payload": {
+    "orderId": "ORD-20251112-152800-4316CB92",
+    "items": [
+      { "productId": "P-8821", "quantity": 2, "price": 29.99 },
+      { "productId": "P-3344", "quantity": 1, "price": 149.99 }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "wms.order.packed.v1",
+  "schemaVersion": "1.0.0",
+  "messageId": "b8b7c4d2-4a1a-4a8a-9b7c-5d5d5c5a5b5c",
+  "correlationId": "ORD-20251112-152800-4316CB92",
+  "occurredAt": "2025-11-12T14:28:30Z",
+  "source": "wms",
+  "payload": { "orderId": "ORD-20251112-152800-4316CB92" }
+}
